@@ -1,20 +1,20 @@
   <ng-container>
   
     <mat-sidenav-container class="example-container">
-      <mat-sidenav #sidenav mode="side" opened class="example-sidenav contenido-sidenav"
+      <mat-sidenav #sidenav mode="side" [opened]="isSidenavOpen" class="example-sidenav contenido-sidenav"
       [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top"
       [fixedBottomGap]="options.value.bottom" [ngClass]="{'active': isSidenavOpen}">
       
         <div class="cuadro"><img src="../assets/logo.png" alt=""></div>
   
         <nav class="sidenav">
-          <a [routerLink]="['/panel']">Principal</a>
-          <a [routerLink]="['/staking']">Staking</a>
-          <a [routerLink]="['/grid']">Grid</a>
-          <a [routerLink]="['/cripto-bolso']">Cripto Bolso</a>
-          <a [routerLink]="['/referidos']">Bonos / Referidos</a>
-          <a [routerLink]="['/perfil']">Perfil</a>
-          <a [routerLink]="['/panel']">Cerrar Sesion</a>
+          <a [routerLink]="['/panel']" (click)="sidenav.toggle()">Principal</a>
+          <a [routerLink]="['/staking']" (click)="sidenav.toggle()">Staking</a>
+          <a [routerLink]="['/grid']" (click)="sidenav.toggle()">Grid</a>
+          <a [routerLink]="['/cripto-bolso']" (click)="sidenav.toggle()">Cripto Bolso</a>
+          <a [routerLink]="['/bonosReferidos']" (click)="sidenav.toggle()">Bonos / Referidos</a>
+          <a [routerLink]="['/perfil']" (click)="sidenav.toggle()">Perfil</a>
+          <a [routerLink]="['/cerraSesion']">Cerrar Sesión</a>
         </nav>
   
       </mat-sidenav>
@@ -27,11 +27,10 @@
             <mat-icon *ngIf="!isSidenavOpen">keyboard_arrow_left</mat-icon>
           </button>
         </p>
-
+          <router-outlet [ngClass]="{'active' : estaActivo}"></router-outlet>
       </mat-sidenav-content>
       
     </mat-sidenav-container>
-    <router-outlet></router-outlet>
-    
+      <router-outlet [ngClass]="{'active' : !estaActivo}"></router-outlet>
     
   </ng-container>

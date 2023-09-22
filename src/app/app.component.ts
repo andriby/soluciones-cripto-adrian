@@ -15,26 +15,29 @@ export class appComponent {
     top: 0,
   });
 
-  isSidenavOpen: boolean = false;
+  
+    estaActivo = false;
+  anchoMinimo = 768;
 
-  estaActivo = true;
-
-  anchoMinimo = 768; 
 
   @HostListener('window:resize', ['$event'])
-  onResize(_event: Event): void {
+  onResize(event: Event): void {
     this.actualizarClaseActiva();
   }
 
+  constructor(private _formBuilder: FormBuilder) {
+
+  }
   private actualizarClaseActiva(): void {
     this.estaActivo = window.innerWidth < this.anchoMinimo;
   }
   
+ 
+  isSidenavOpen: boolean = false;
 
   toggleSidenav() {
     this.isSidenavOpen = !this.isSidenavOpen;
   }
 
-  constructor(private _formBuilder: FormBuilder) {}
 
 }
