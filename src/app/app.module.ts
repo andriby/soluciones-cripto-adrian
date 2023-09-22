@@ -10,11 +10,27 @@ import {NgIf} from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 import { appComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatIconModule} from '@angular/material/icon'; 
+import {MatIconModule} from '@angular/material/icon';
+import {MatProgressBarModule} from '@angular/material/progress-bar'; 
+
+
+import { PanelPrincipalComponent } from './components/panel-principal/panel-principal.component';
+import { AppRoutingModule } from './app-routing.module';
+import { StakingComponent } from './components/staking/staking.component';
+import { GridComponent } from './components/grid/grid.component';
+import { CriptoBolsoComponent } from './components/cripto-bolso/cripto-bolso.component';
+import { BonosReferidosComponent } from './components/bonos-referidos/bonos-referidos.component';
+import { PerfilComponent } from './components/perfil/perfil.component'; 
 
 @NgModule({
   declarations: [
-    appComponent
+    appComponent,
+    PanelPrincipalComponent,
+    StakingComponent,
+    GridComponent,
+    CriptoBolsoComponent,
+    BonosReferidosComponent,
+    PerfilComponent
   ],
   imports: [
     BrowserModule,
@@ -28,7 +44,10 @@ import {MatIconModule} from '@angular/material/icon';
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule, 
-    MatIconModule
+    MatIconModule,
+    MatProgressBarModule,
+    AppRoutingModule,
+    
   ],
   providers: [],
   bootstrap: [appComponent]

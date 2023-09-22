@@ -1,11 +1,15 @@
 /* You can add global styles to this file, and also import other style files */
-  
-@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Roboto&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Open+Sans&family=Roboto&display=swap');
 @import '~@angular/material/prebuilt-themes/indigo-pink.css';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
 
+*, *::after, *::before{
+    margin: 0;
+    padding: 0;
+}
 
 body{
     background-image: url(assets/background.jpg) ;
@@ -13,9 +17,86 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+}
+
+
+
+.clearfix::after {
+    content: ""; 
+    clear: both;
+    display: table;
+} 
+
+.centrar{
+    display: flex;
+    justify-content: center;
 }
 
 h1, h2, h3{
-    font-family: 'Inclusive Sans', sans-serif;;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.titulo-contenedor{
+    background-image: url(assets/titulo-fondo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    height: 8rem;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem 0;
+}
+
+.titulo-cabecera{
+    font-size: 1.9rem;
+    padding-bottom: 2rem;
+    text-transform: uppercase;
+}
+
+@media only screen and (max-width: 992px){
+    .titulo-cabecera{
+        font-size: 1.8rem;
+        padding-bottom: 1.8rem;
+    }
+}
+
+@media only screen and (max-width: 768px){
+    .titulo-cabecera{
+        font-size: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+}
+
+@media only screen and (max-width: 576px){
+    .titulo-cabecera{
+        font-size: 1.3rem;
+        padding-bottom: 1.3rem;
+    }
+}
+
+@media only screen and (max-width: 300px){
+    .titulo-cabecera{
+        font-size: 1rem;
+        padding-bottom: 1rem;
+    }
+}
+
+
+.botonPrincipal{
+    height: 7rem;
+    padding: .5rem;
+    text-align: left;
+    margin: 1rem;
+    margin-left: 0;
+    position: relative;
+    box-shadow: -1px 1px 2px rgba(0, 0, 0, .3);
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    border-radius: 7px;
+    border: 1px solid #fff;
 }
 

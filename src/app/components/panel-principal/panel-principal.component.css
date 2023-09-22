@@ -1,0 +1,36 @@
+.plan-de-carrera {
+    width: 80%; 
+}
+
+.plan-de-carrera .row .col{
+    background-color: gray;
+    border: 1px solid #fff;
+}
+
+.menu-principal{
+    margin-top: 3rem;
+    width: 75%;
+}
+
+.stakingNav{
+    background-color: #AFD1A0;
+}
+
+.gridNav{
+    background-color: #D8E2F3;
+}
+
+.cripto-bolsoNav{
+    background-color: #FBE4D4;
+}
+
+.referidosNav{
+    background-color: #FFF2CC;
+}
+
+.marco{
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, .5);
+    padding: .5rem;
+    border-radius: 10px;
+}

@@ -1,65 +1,85 @@
 
 /*SideNav*/
-  .example-sidenav {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 15rem;
-    background: rgb(236,236,236);
-  }
-  
-  .contenido-sidenav{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
+.example-sidenav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15rem;
+  background: rgb(236,236,236);
+}
 
-  .mat-drawer-container{
-    background: none;
-  }
+.contenido-sidenav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 
-  .cuadro{
-    background: rgb(245,245,245);
-    box-shadow: 0 0 10px rgba(0, 0, 0, .4);
-    height: 15vh;
-    -webkit-transform: skew(1deg, -10deg);
-    width: 99.5%;
-  }
+.mat-drawer-container{
+  background: none;
+}
 
-  .cuadro img{
-    height: 6rem;
-  }
+.cuadro{
+  background: rgb(245,245,245);
+  box-shadow: 0 0 10px rgba(0, 0, 0, .4);
+  height: 20vh;
+  transform: skew(1deg, -10deg);
+  -webkit-transform: skew(1deg, -10deg);
+  width: 99.5%;
+  transform-origin: left center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-  .sidenav{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 72vh;
-    padding: 2rem 0;
-  }
+.cuadro img{
+  height: 7rem;
+}
 
-  .sidenav a{
-    color: #000;
-    text-transform: uppercase;
-    text-decoration: none;
-    width: 100%;    
-    background-color: rgba(245, 244, 244, 0.596);
-    padding: 1rem 0;
-    height: 1rem;
-    border-top: 1px solid #f4f4f4;
-    border-bottom: 1px solid #f4f4f4;
-  }
+.sidenav{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 70vh;
+  padding: 2rem 0;
+}
 
-  .sidenav a:hover{
-    background-color: rgba(204, 204, 204, 0.9);
-  }
+.sidenav a{
+  color: #000;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 100%;    
+  background-color: rgba(245, 244, 244, 0.596);
+  padding: 1.5rem 0;
+  height: 1rem;
+  border-top: 1px solid #f4f4f4;
+  border-bottom: 1px solid #f4f4f4;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;  }
+
+.sidenav a:hover{
+  background-color: rgba(204, 204, 204, 0.9);
+}
 
 
-  .sidenav a:last-child{
-    margin-top:auto
-  }
+.sidenav a:last-child{
+  margin-top:auto
+}
+
+mat-icon {
+  transition: transform 0.3s ease-in-out; /* Ajusta la duración y el tipo de transición según tus preferencias */
+}
+
+router-outlet{
+  display: none;
+}
+
+
+router-outlet.active{
+  display: block;
+}
 
 /*End SideNav*/
 
