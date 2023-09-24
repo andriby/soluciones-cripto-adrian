@@ -20,7 +20,8 @@ import { StakingComponent } from './components/staking/staking.component';
 import { GridComponent } from './components/grid/grid.component';
 import { CriptoBolsoComponent } from './components/cripto-bolso/cripto-bolso.component';
 import { BonosReferidosComponent } from './components/bonos-referidos/bonos-referidos.component';
-import { PerfilComponent } from './components/perfil/perfil.component'; 
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { SidebarComponent } from './layout/sidebar/sidebar.component'; 
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { PerfilComponent } from './components/perfil/perfil.component';
     GridComponent,
     CriptoBolsoComponent,
     BonosReferidosComponent,
-    PerfilComponent
+    PerfilComponent,
+    SidebarComponent
   ],
   imports: [
     BrowserModule,

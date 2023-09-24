@@ -14,18 +14,26 @@
 
 .stakingNav{
     background-color: #AFD1A0;
+    border: 1px solid #70AD47;
+    color: #385723;
 }
 
 .gridNav{
     background-color: #D8E2F3;
+    color: #4472C4;
+    border: 1px solid #B4C7E7;
 }
 
 .cripto-bolsoNav{
     background-color: #FBE4D4;
+    color: #EF975B;
+    border: 1px solid #F8CBAD;
 }
 
 .referidosNav{
     background-color: #FFF2CC;
+    color: #7F6000;
+    border: 1px solid #FFD966;
 }
 
 .marco{
@@ -34,3 +42,4 @@
     padding: .5rem;
     border-radius: 10px;
 }
+
