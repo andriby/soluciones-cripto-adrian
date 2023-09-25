@@ -1,5 +1,6 @@
 import { Component, HostListener, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
+import { LoginService } from 'src/app/services/login/login.service';
 
 @Component({
   selector: 'app-sidebar',
@@ -7,6 +8,7 @@ import { FormBuilder } from '@angular/forms';
   styleUrls: ['./sidebar.component.css']
 })
 export class SidebarComponent implements OnInit {
+  
   options = this._formBuilder.group({
     bottom: 0,
     fixed: true,
@@ -23,7 +25,7 @@ export class SidebarComponent implements OnInit {
     this.actualizarClaseActiva();
   }
 
-  constructor(private _formBuilder: FormBuilder) {
+  constructor(private _formBuilder: FormBuilder, private loginService: LoginService) {
 
   }
   private actualizarClaseActiva(): void {
@@ -38,6 +40,13 @@ export class SidebarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  validacion(): void{
+
+  }
+  cerrarSesion(): void{
+    this.loginService.logout();
   }
 
 }

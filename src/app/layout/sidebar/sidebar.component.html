@@ -1,7 +1,7 @@
 <mat-sidenav-container class="example-container">
     <mat-sidenav #sidenav mode="side" [opened]="isSidenavOpen" class="example-sidenav contenido-sidenav"
     [fixedInViewport]="options.value.fixed" [fixedTopGap]="options.value.top"
-    [fixedBottomGap]="options.value.bottom" [ngClass]="{'active': isSidenavOpen}">
+    [fixedBottomGap]="options.value.bottom">
     
       <div class="cuadro"><img src="../assets/logo.png" alt=""></div>
 
@@ -12,7 +12,7 @@
         <a [routerLink]="['/cripto-bolso']" (click)="sidenav.toggle(); toggleSidenav()">Cripto Bolso</a>
         <a [routerLink]="['/bonosReferidos']" (click)="sidenav.toggle(); toggleSidenav()">Bonos / Referidos</a>
         <a [routerLink]="['/perfil']" (click)="sidenav.toggle(); toggleSidenav()">Perfil</a>
-        <a [routerLink]="['/cerraSesion']">Cerrar Sesión</a>
+        <a (click)="cerrarSesion()">Cerrar Sesión</a>
       </nav>
 
     </mat-sidenav>

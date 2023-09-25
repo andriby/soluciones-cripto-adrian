@@ -14,4 +14,9 @@ export class PanelPrincipalComponent implements OnInit {
 
   listo: boolean = true;
 
+  comprarActive: boolean = false
+
+  comprar(){
+    this.comprarActive = !this.comprarActive
+  }
 }

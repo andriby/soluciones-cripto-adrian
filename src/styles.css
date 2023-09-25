@@ -2,9 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Open+Sans&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins:wght@300;400&display=swap');
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+/*Globales*/
 
 html, body { height: 100%; }
-body { margin: 0; font-family: 'Roboto', "Helvetica Neue", sans-serif; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 *, *::after, *::before{
     margin: 0;
@@ -20,6 +23,12 @@ body{
     overflow-x: hidden;
 }
 
+.clearfix {
+    content: ""; 
+    clear: both;
+    display: table;
+} 
+
 .clearfix::after {
     content: ""; 
     clear: both;
@@ -34,6 +43,8 @@ body{
 h1, h2, h3{
     font-family: 'Open Sans', sans-serif;
 }
+
+/*titulos*/
 
 .titulo-contenedor{
     background-image: url(assets/titulo-fondo.png);
@@ -84,6 +95,8 @@ h1, h2, h3{
     }
 }
 
+/*Botones*/
+
 .botonPrincipal{
     height: 7rem;
     padding: .5rem;
@@ -115,4 +128,51 @@ h1, h2, h3{
     font-weight: 300;
     padding: .3rem;
     font-size: .9rem;
+}
+
+/*Formularios*/
+
+.contenedor-formulario{
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-con-nombre{
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.formulario{
+    background-color: rgba(255, 255, 255, .7);
+    border-radius: 7px;
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: -1px 1px 10px rgba(0, 0, 0, .3);
+}
+
+.formulario h1{
+    text-transform: uppercase;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+.btnGroup{
+    margin-top: 2rem;
+    gap: .5rem;
+    display: flex;
+    justify-content: center;
+}
+
+.btnGroup button{
+    width: 60%;
+    padding: .5rem 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
 }

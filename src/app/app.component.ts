@@ -1,5 +1,6 @@
 import {Component, HostListener} from '@angular/core';
 import {FormBuilder} from '@angular/forms';
+import { LoginService } from './services/login/login.service';
 
 
 /** @title Fixed sidenav */
@@ -9,5 +10,10 @@ import {FormBuilder} from '@angular/forms';
   styleUrls: ['app.component.css'],
 })
 export class appComponent {
+  constructor(private loginService: LoginService) { }
 
+  usuarioLogueado(): boolean {
+    return this.loginService.estaAutenticado();
+  }
+  
 }

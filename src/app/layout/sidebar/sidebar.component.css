@@ -62,6 +62,7 @@
   
   .sidenav a:hover{
     background-color: rgba(204, 204, 204, 0.9);
+    cursor: pointer;
   }
   
   
@@ -72,15 +73,6 @@
   mat-icon {
     transition: transform 0.3s ease-in-out; /* Ajusta la duración y el tipo de transición según tus preferencias */
   }
-  
-   router-outlet{
-    display: none;
-  }
-  
-  
-  router-outlet.active{
-    display: block;
-  } 
   
   /*End SideNav*/
   
