@@ -37,7 +37,7 @@
             </div>
             <div class="col-12 col-md gridNav botonPrincipal">
               <span>Grid</span>
-              <button class="btn btn-primary btnComprar">Comprar</button>
+              <button class="btn btn-primary btnComprar" (click)="comprar()">Comprar</button>
               <img src="../../../assets/grid.png" alt="">
             </div>
           </div>
@@ -45,12 +45,12 @@
           <div class="row">
             <div class="col-12 col-md  cripto-bolsoNav botonPrincipal">
               <span>Cripto Bolso</span>
-              <button class="btn btn-primary btnComprar">Comprar</button>
+              <button class="btn btn-primary btnComprar" (click)="comprar()">Comprar</button>
               <img src="../../../assets/cripto-bolso.png" alt="">
             </div>
             <div class="col-12 col-md  referidosNav botonPrincipal">
               <span>Referidos</span>
-              <button class="btn btn-primary btnComprar">Comprar</button>
+              <button class="btn btn-primary btnComprar">Referir</button>
               <img src="../../../assets/referidos.png" alt="">
             </div>
           </div>
@@ -63,6 +63,7 @@
     <div class="centrar">
       <div class="marco">
         <h2>Resumen</h2>
+        <app-resumen-table></app-resumen-table>
       </div>
     </div>
     

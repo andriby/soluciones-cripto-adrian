@@ -1,4 +1,4 @@
-<mat-stepper [linear]="isLinear" #stepper>
+<mat-stepper linear [orientation]="(stepperOrientation | async)!">
 
   <mat-step [stepControl]="firstFormGroup">
     <form [formGroup]="firstFormGroup">
@@ -6,7 +6,7 @@
       
       <mat-form-field appearance="fill">
         <mat-label>-- Servicio --</mat-label>
-        <mat-select formControlName="firstCtrl" required>
+        <mat-select formControlName="servicioCtrl" required>
           <mat-option *ngFor="let servicio of servicios" [value]="servicio.value">
             {{servicio.viewValue}}
           </mat-option>
@@ -15,9 +15,9 @@
 
       <mat-form-field appearance="fill">
         <mat-label>-- Plan --</mat-label>
-        <mat-select formControlName="firstCtrl" required>
-          <mat-option *ngFor="let servicio of servicios" [value]="servicio.value">
-            {{servicio.viewValue}}
+        <mat-select formControlName="planCtrl" required>
+          <mat-option *ngFor="let plan of planes" [value]="plan.value">
+            {{plan.viewValue}}
           </mat-option>
         </mat-select>
       </mat-form-field>
@@ -33,14 +33,24 @@
     <form [formGroup]="secondFormGroup">
 
       <ng-template matStepLabel>Pago</ng-template>
-      <mat-form-field appearance="fill">
-        <mat-label>Address</mat-label>
-        <input matInput formControlName="secondCtrl" placeholder="Ex. 1 Main St, New York, NY"
-               required>
+            <mat-form-field appearance="fill">
+        <mat-label>-- Metodo de Pago --</mat-label>
+        <mat-select formControlName="metodoCtrl" required>
+          <mat-option *ngFor="let metodo of metodos" [value]="metodo.value">
+            {{metodo.viewValue}}
+          </mat-option>
+        </mat-select>
       </mat-form-field>
+
+      <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Capital Inicial</mat-label>
+        <span matPrefix>$ &nbsp;</span>
+        <input matInput formControlName="capitalCtrl" type="number" placeholder="100" min="100" max="10000" required>
+      </mat-form-field>
+
       <div>
         <button mat-button matStepperPrevious>Back</button>
-        <button mat-button matStepperNext>Next</button>
+        <button mat-button matStepperNext (click)="validarValor($event)">Next</button>
       </div>
     </form>
   </mat-step>
@@ -50,7 +60,6 @@
     <p>You are now done.</p>
     <div>
       <button mat-button matStepperPrevious>Back</button>
-      <button mat-button (click)="stepper.reset()">Reset</button>
     </div>
   </mat-step>
 

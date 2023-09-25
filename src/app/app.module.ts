@@ -15,6 +15,9 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatStepperModule } from '@angular/material/stepper'; 
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog'; 
+import {MatTableModule} from '@angular/material/table'; 
+import { ResumenTableComponent } from './pages/panel-principal/resumen-table/resumen-table.component'; 
+import { MatSortModule } from '@angular/material/sort'; 
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -27,7 +30,8 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { ComprarComponent } from './components/comprar/comprar.component'; 
+import { ComprarComponent } from './components/comprar/comprar.component';
+import { MatPaginatorModule } from '@angular/material/paginator'; 
 
 @NgModule({
   declarations: [
@@ -42,6 +46,7 @@ import { ComprarComponent } from './components/comprar/comprar.component';
     LoginComponent,
     RegisterComponent,
     ComprarComponent,
+    ResumenTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -60,7 +65,10 @@ import { ComprarComponent } from './components/comprar/comprar.component';
     AppRoutingModule,
     MatStepperModule,
     MatSelectModule,
-    MatDialogModule
+    MatDialogModule,
+    MatTableModule,
+    MatPaginatorModule,
+    MatSortModule
   ],
   providers: [],
   bootstrap: [appComponent]
