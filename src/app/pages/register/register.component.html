@@ -1,1 +1,137 @@
-<p>register works!</p>
+    <div class="container-fluid">
+        <img src="../../../assets/logo-con-nombre.png" alt="Soluciones Cripto" class="img-fluid logo-con-nombre">
+        <div class="contenedor-formulario">
+
+            <div class="formulario">
+
+
+                <div class="registrarseDiv">
+
+                    <div class="registrarseHeader">
+                        <h1>Registrarse</h1>
+                        <mat-hint>Al registrarte aceptas los terminos y condiciones</mat-hint>
+                    </div>
+
+                    <div class="registrarseHeader">
+                        <mat-form-field appearance="fill">
+                            <mat-label>Codigo de Referido</mat-label>
+                            <input type="text" matInput>
+                        </mat-form-field>                    
+                    </div>
+
+                </div>
+
+                <form>
+
+                    <mat-form-field appearance="fill">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                            placeholder="Ex. pat@example.com">
+                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                        Please enter a valid email address
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                        Email is <strong>required</strong>
+                    </mat-error>
+                    </mat-form-field>
+
+                    <div class="row">
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Password</mat-label>
+                            <input type="password" matInput [formControl]="passwordFormControl" [errorStateMatcher]="matcher">
+                            <mat-error *ngIf="passwordFormControl.hasError('required')">
+                                Password is <strong>required</strong>
+                            </mat-error>
+                            <mat-error *ngIf="passwordFormControl.hasError('passwordsNotMatch')">
+                                Las contraseñas deben ser iguales
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Confirm Password</mat-label>
+                            <input type="password" matInput [formControl]="confirmPasswordFormControl" [errorStateMatcher]="matcher">
+                            <mat-error *ngIf="confirmPasswordFormControl.hasError('required')">
+                                Confirm Password is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                    </div>
+
+                    <div class="row">
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Nombre</mat-label>
+                            <input type="nombre" matInput [formControl]="nombreFormControl" [errorStateMatcher]="matcher">
+                            <mat-error *ngIf="nombreFormControl.hasError('required')">
+                                Nombre is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Apellido</mat-label>
+                            <input type="password" matInput [formControl]="apellidoFormControl" [errorStateMatcher]="matcher">
+                            <mat-error *ngIf="apellidoFormControl.hasError('required')">
+                                Apellido Password is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                    </div>
+
+                    <div class="row">
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Cedula</mat-label>
+                            <span matPrefix>V &nbsp;</span>
+                            <input type="number" matInput [formControl]="cedulaFormControl" [errorStateMatcher]="matcher">
+                            <mat-error *ngIf="cedulaFormControl.hasError('required')">
+                                Cedula is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Direccion</mat-label>
+                            <input type="text" matInput [formControl]="direccionFormControl" [errorStateMatcher]="matcher">
+                            <mat-error *ngIf="direccionFormControl.hasError('required')">
+                                Direccion is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                    </div>
+
+                    <div class="row">
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>Phone</mat-label>
+                            <span matPrefix>+58 &nbsp;</span>
+                            <input type="number" matInput [formControl]="telefonoFormControl" [errorStateMatcher]="matcher">
+                            <mat-error *ngIf="telefonoFormControl.hasError('required')">
+                                Phone is <strong>required</strong>
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field appearance="fill">
+                            <mat-label>birthdate</mat-label>
+                            <input type="date" matInput [formControl]="FdeNacimientoFormControl" [errorStateMatcher]="matcher">
+                            <mat-error *ngIf="FdeNacimientoFormControl.hasError('required')">
+                                birthdate is <strong>required</strong>
+                            </mat-error>
+                            <mat-error *ngIf="FdeNacimientoFormControl.hasError('underage')">
+                                You must be of legal age
+                            </mat-error>
+                        </mat-form-field>
+
+                    </div>
+
+                    <div class="btnGroup">
+                        <button type="button" class="btn btn-secondary" [routerLink]="['/login']" >Ingresar</button>
+                        <button type="button" class="btn btn-primary">Registrarse</button>
+                    </div>
+
+                </form>
+
+            </div>
+                
+        </div>
+    </div>
+<div class="bloque-ingreso"></div>

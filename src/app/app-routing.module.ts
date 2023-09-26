@@ -15,15 +15,15 @@ import { AuthGuard } from './services/auth-guard/auth-guard.service';
 
 
 const routes: Routes = [
-  { path: 'panel', component: PanelPrincipalComponent , canActivate: [AuthGuard] },
-  { path: 'staking', component: StakingComponent },
-  { path: 'grid', component: GridComponent },
-  { path: 'cripto-bolso', component: CriptoBolsoComponent },
-  { path: 'bonosReferidos', component: BonosReferidosComponent },
-  { path: 'perfil', component: PerfilComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'comprar', component: ComprarComponent }
+  { path: 'panel', component: PanelPrincipalComponent, canActivate: [AuthGuard] },
+  { path: 'staking', component: StakingComponent, canActivate: [AuthGuard] },
+  { path: 'grid', component: GridComponent, canActivate: [AuthGuard] },
+  { path: 'cripto-bolso', component: CriptoBolsoComponent, canActivate: [AuthGuard] },
+  { path: 'bonosReferidos', component: BonosReferidosComponent, canActivate: [AuthGuard] },
+  { path: 'perfil', component: PerfilComponent , canActivate: [AuthGuard] },
+  { path: 'comprar', component: ComprarComponent, canActivate: [AuthGuard] }
 
 ];
 
