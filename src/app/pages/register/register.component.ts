@@ -15,6 +15,9 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
 })
 export class RegisterComponent implements OnInit {
 
+  hide: boolean = true;
+  hide1: boolean = true;
+
   ageValidator: ValidatorFn = (control: AbstractControl): { [key: string]: any } | null => {
     const birthDate = new Date(control.value);
     const currentDate = new Date();
@@ -76,6 +79,4 @@ export class RegisterComponent implements OnInit {
         }
       }
     */
-    
-  
 }

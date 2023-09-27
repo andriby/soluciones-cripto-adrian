@@ -8,3 +8,24 @@ mat-stepper{
 mat-form-field{
     margin-left: 3rem;
 }
+
+.fileInput{
+    text-transform: uppercase;
+}
+
+.row{
+    width: 100%;
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+}
+
+.row mat-form-field{
+    width: 30%;
+}
+
+.fileDiv{
+    width: 75%;
+    margin: 1rem auto;
+}

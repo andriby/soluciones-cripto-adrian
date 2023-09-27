@@ -23,7 +23,8 @@ const routes: Routes = [
   { path: 'cripto-bolso', component: CriptoBolsoComponent, canActivate: [AuthGuard] },
   { path: 'bonosReferidos', component: BonosReferidosComponent, canActivate: [AuthGuard] },
   { path: 'perfil', component: PerfilComponent , canActivate: [AuthGuard] },
-  { path: 'comprar', component: ComprarComponent, canActivate: [AuthGuard] }
+  { path: 'comprar', component: ComprarComponent, canActivate: [AuthGuard] },
+  { path: '**', redirectTo: '/login', pathMatch: 'full' }
 
 ];
 

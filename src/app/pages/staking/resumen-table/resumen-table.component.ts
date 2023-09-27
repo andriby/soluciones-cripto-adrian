@@ -6,33 +6,22 @@ import { MatTableDataSource } from '@angular/material/table';
 export interface UserData {
   id: string;
   name: string;
-  concepto: string;
-  tipo: string;
-  fecha: string;
+  progress: string;
+  fruit: string;
 }
 
 /** Constants used to fill up our data base. */
-const CONCEPTOS: string[] = [
-  'Staking',
-  'Cripto Bolso',
-  'Grid',
-  'Bono'
+const FRUITS: string[] = [
+  'blueberry',
+  'lychee',
+  'kiwi',
+  'mango',
+  'peach',
+  'lime',
+  'pomegranate',
+  'pineapple',
 ];
-
-const TIPOS: string[] = [
-  'Pago',
-  'Retiro',
-  'Deposito',
-  'Compra'
-]
-
-const FECHAS: string[] = [
-  '04/02/2023',
-  '27/08/2023',
-  '10/09/2023',
-  '15/05/2023'
-]
-const USUARIOS: string[] = [
+const NAMES: string[] = [
   'Maia',
   'Asher',
   'Olivia',
@@ -61,14 +50,14 @@ const USUARIOS: string[] = [
 })
 export class ResumenTableComponent implements AfterViewInit {
 
-  displayedColumns: string[] = ['fecha', 'name', 'concepto', 'tipo', 'id'];
+  displayedColumns: string[] = ['id', 'name', 'progress', 'fruit'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
   constructor() {
-    const users = Array.from({length: 100}, (_, k) => createNew(k + 1));
+    const users = Array.from({length: 100}, (_, k) => createNewUser(k + 1));
 
     this.dataSource = new MatTableDataSource(users);
   }
@@ -88,30 +77,17 @@ export class ResumenTableComponent implements AfterViewInit {
   }
 }
 
-function createNew(id: number): UserData {
+function createNewUser(id: number): UserData {
   const name =
-    USUARIOS[Math.round(Math.random() * (USUARIOS.length - 1))] +
+    NAMES[Math.round(Math.random() * (NAMES.length - 1))] +
     ' ' +
-    USUARIOS[Math.round(Math.random() * (USUARIOS.length - 1))].charAt(0) +
+    NAMES[Math.round(Math.random() * (NAMES.length - 1))].charAt(0) +
     '.';
 
-    const fecha =
-    FECHAS[Math.round(Math.random() * (FECHAS.length - 1))] +
-    ' ';
-
-    const concepto =
-    CONCEPTOS[Math.round(Math.random() * (CONCEPTOS.length - 1))] +
-    ' ';
-
-    const tipo =
-    TIPOS[Math.round(Math.random() * (TIPOS.length - 1))] +
-    ' ';
-
   return {
-    fecha:fecha,
-    name: name,
-    concepto: concepto,
-    tipo: tipo,
     id: id.toString(),
+    name: name,
+    progress: Math.round(Math.random() * 100).toString(),
+    fruit: FRUITS[Math.round(Math.random() * (FRUITS.length - 1))],
   };
 }

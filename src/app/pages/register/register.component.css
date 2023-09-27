@@ -30,4 +30,5 @@ form mat-form-field{
 
 form .row mat-form-field{
     width: 50%;
+    margin-top: 1rem;
 }

@@ -10,6 +10,8 @@ export class LoginComponent implements OnInit {
 
   constructor(private loginService: LoginService) { }
 
+  hide: boolean = true;
+
   iniciarSesion(): void {
     this.loginService.login();
   }
