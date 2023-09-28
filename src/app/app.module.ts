@@ -31,7 +31,8 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ComprarComponent } from './components/comprar/comprar.component';
-import { MatPaginatorModule } from '@angular/material/paginator'; 
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { GridTableComponent } from './pages/grid/grid-table/grid-table/grid-table.component'; 
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
     RegisterComponent,
     ComprarComponent,
     ResumenTableComponent,
+    GridTableComponent,
   ],
   imports: [
     BrowserModule,
