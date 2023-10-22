@@ -31,6 +31,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { ComprarComponent } from './components/comprar/comprar.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { GridTableComponent } from './pages/grid/grid-table/grid-table/grid-table.component'; 
 import { StakingTableComponent } from './pages/staking/staking-table/staking-table/staking-table.component'; 
 import { ResumenTableComponent } from './pages/panel-principal/resumen-table/resumen-table.component'; 
 
@@ -48,6 +49,7 @@ import { ResumenTableComponent } from './pages/panel-principal/resumen-table/res
     RegisterComponent,
     ComprarComponent,
     ResumenTableComponent,
+    GridTableComponent,
     StakingTableComponent,
   ],
   imports: [
