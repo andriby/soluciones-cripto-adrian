@@ -30,6 +30,7 @@ import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { GridTableComponent } from './pages/grid/grid-table/grid-table/grid-table.component'; 
 import { StakingTableComponent } from './pages/staking/staking-table/staking-table/staking-table.component'; 
 import { ResumenTableComponent } from './pages/panel-principal/resumen-table/resumen-table.component'; 
 
@@ -46,6 +47,7 @@ import { ResumenTableComponent } from './pages/panel-principal/resumen-table/res
     LoginComponent,
     RegisterComponent,
     ResumenTableComponent,
+    GridTableComponent,
     StakingTableComponent,
   ],
   imports: [
