@@ -47,7 +47,3 @@ export class GridTableComponent implements AfterViewInit {
     }
   }
 }
-
-function createNew(id: number): gridData {
-  
-}

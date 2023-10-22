@@ -251,6 +251,7 @@ table{
         border-radius: 10px;
         padding: 1rem;
     }
+    
     table td{
         text-align: left;
     }
@@ -269,5 +270,4 @@ table{
     border-radius: 10px;
     width: 95%;
     text-align: center;
-=======
 }
