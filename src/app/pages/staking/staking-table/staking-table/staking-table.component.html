@@ -6,11 +6,6 @@
 <div class="mat-elevation-z8">
   <table mat-table [dataSource]="dataSource" matSort>
 
-    <ng-container matColumnDef="mes">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header> mes </th>
-      <td mat-cell *matCellDef="let row"> {{row.mes}} </td>
-    </ng-container>
-
     <ng-container matColumnDef="fecha">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Usuario </th>
       <td mat-cell *matCellDef="let row"> {{row.fecha}} </td>

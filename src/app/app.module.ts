@@ -29,7 +29,6 @@ import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { ComprarComponent } from './components/comprar/comprar.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { StakingTableComponent } from './pages/staking/staking-table/staking-table/staking-table.component'; 
 import { ResumenTableComponent } from './pages/panel-principal/resumen-table/resumen-table.component'; 
@@ -46,7 +45,6 @@ import { ResumenTableComponent } from './pages/panel-principal/resumen-table/res
     SidebarComponent,
     LoginComponent,
     RegisterComponent,
-    ComprarComponent,
     ResumenTableComponent,
     StakingTableComponent,
   ],

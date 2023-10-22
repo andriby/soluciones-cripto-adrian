@@ -10,7 +10,6 @@ import { GridComponent } from './pages/grid/grid.component';
 import { CriptoBolsoComponent } from './pages/cripto-bolso/cripto-bolso.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { BonosReferidosComponent } from './pages/bonos-referidos/bonos-referidos.component';
-import { ComprarComponent } from './components/comprar/comprar.component';
 import { AuthGuard } from './services/auth-guard/auth-guard.service';
 
 
@@ -23,7 +22,6 @@ const routes: Routes = [
   { path: 'cripto-bolso', component: CriptoBolsoComponent, canActivate: [AuthGuard] },
   { path: 'bonosReferidos', component: BonosReferidosComponent, canActivate: [AuthGuard] },
   { path: 'perfil', component: PerfilComponent , canActivate: [AuthGuard] },
-  { path: 'comprar', component: ComprarComponent, canActivate: [AuthGuard] },
   { path: '**', redirectTo: '/login', pathMatch: 'full' }
 
 ];

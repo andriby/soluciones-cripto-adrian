@@ -23,6 +23,10 @@ body{
     overflow-x: hidden;
 }
 
+@media only screen and (min-width: 300px){
+    container-fluid{ padding: 0; margin: 0;}
+}
+
 .bloque-ingreso{
     position: fixed;
     bottom: 0;
@@ -97,31 +101,31 @@ h1, h2, h3{
     transition: .3s all ease-in;
 }
 
-@media only screen and (max-width: 992px){
+@media only screen and (min-width: 992px){
     .titulo-cabecera{
         font-size: 1.8rem;
         padding-bottom: 1.8rem;
     }
 }
 
-@media only screen and (max-width: 768px){
+@media only screen and (min-width: 768px){
     .titulo-cabecera{
         font-size: 1.5rem;
         padding-bottom: 1.5rem;
     }
 }
 
-@media only screen and (max-width: 576px){
+@media only screen and (min-width: 576px){
     .titulo-cabecera{
-        font-size: 1.3rem;
-        padding-bottom: 1.3rem;
+        font-size: 1.2rem;
+        padding-bottom: 1.1rem;
     }
 }
 
-@media only screen and (max-width: 300px){
+@media only screen and (min-width: 300px){
     .titulo-cabecera{
-        font-size: 1rem;
-        padding-bottom: 1rem;
+        font-size: .9rem;
+        padding-bottom: 0.8rem;
     }
 }
 
@@ -167,6 +171,8 @@ h1, h2, h3{
 
 /*Formularios*/
 
+
+
 .marco{
     backdrop-filter: blur(4px);
     background-color: rgba(255, 255, 255, .5);
@@ -175,6 +181,7 @@ h1, h2, h3{
     width: 95%;
     text-align: center;
 }
+
 
 .contenedor-formulario{
     height: 94vh;
@@ -226,10 +233,23 @@ table{
     width: 100%;
 }
 
-.mat-cell{
-    text-align: left;
+.marco{
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, .5);
+    padding: 1.5rem 2.5rem;
+    border-radius: none;
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
 }
 
-ng-container {
-    width: 25%;
+@media only screen and (min-width:768px){
+    .marco{
+        width: 75%;
+        border-radius: 10px;
+        padding: 1rem;
+    }
+    table td{
+        text-align: left;
+    }
 }

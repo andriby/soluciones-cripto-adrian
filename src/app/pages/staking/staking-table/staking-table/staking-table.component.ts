@@ -5,7 +5,6 @@ import { MatTableDataSource } from '@angular/material/table';
 
 export interface stakingData {
   id: string;
-  mes: string;
   fecha: string;
   ganancia: number;
   monto: number;
@@ -13,26 +12,11 @@ export interface stakingData {
   recibo:number;
 } 
 
-const MESES: string[] = [
-  'Enero',
-  'Febrero',
-  'Marzo',
-  'Abril',
-  'Mayo',
-  'Junio',
-  'Julio',
-  'Agosto',
-  'Septiembre',
-  'Octubre',
-  'Noviembre',
-  'Diciembre'
-]
-
 const FECHAS: string[] = [
-  '04/02/2023',
-  '27/08/2023',
-  '10/09/2023',
-  '15/05/2023'
+  '04/02/23',
+  '27/08/23',
+  '10/09/23',
+  '15/05/23'
 ] 
 
 const GANANCIAS: number[] = [];
@@ -66,7 +50,7 @@ for (let i = 1; i <= 30; i++) {
 
 export class StakingTableComponent implements AfterViewInit {
 
-  displayedColumns: string[] = ['mes', 'fecha', 'ganancia', 'monto', 'diasRestantes', 'recibo'];
+  displayedColumns: string[] = ['fecha', 'ganancia', 'monto', 'diasRestantes', 'recibo'];
   dataSource: MatTableDataSource<stakingData>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -95,8 +79,6 @@ export class StakingTableComponent implements AfterViewInit {
 }
 
 function createNew(id:number): stakingData {
-  const mes = 
-  MESES[Math.round(Math.random() * (MESES.length -1))];
 
   const fecha = 
   FECHAS[Math.round(Math.random() * (FECHAS.length -1))];
@@ -114,7 +96,6 @@ function createNew(id:number): stakingData {
   RECIBOS[Math.round(Math.random() * (RECIBOS.length -1))];
 
   return {
-    mes: mes,
     fecha: fecha,
     ganancia: ganancia,
     monto: monto,
