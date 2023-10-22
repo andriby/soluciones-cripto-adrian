@@ -1,11 +1,11 @@
-import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, ViewChild } from '@angular/core';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 
 export interface UserData {
   id: string;
-  name: string;
+  monto: string;
   concepto: string;
   tipo: string;
   fecha: string;
@@ -32,26 +32,16 @@ const FECHAS: string[] = [
   '10/09/2023',
   '15/05/2023'
 ]
-const USUARIOS: string[] = [
-  'Maia',
-  'Asher',
-  'Olivia',
-  'Atticus',
-  'Amelia',
-  'Jack',
-  'Charlotte',
-  'Theodore',
-  'Isla',
-  'Oliver',
-  'Isabella',
-  'Jasper',
-  'Cora',
-  'Levi',
-  'Violet',
-  'Arthur',
-  'Mia',
-  'Thomas',
-  'Elizabeth',
+const MONTOS: number[] = [
+  500,
+  4562,
+  568,
+  50,
+  5,
+  5000,
+  75,
+  74,
+  456,
 ];
 
 @Component({
@@ -61,7 +51,7 @@ const USUARIOS: string[] = [
 })
 export class ResumenTableComponent implements AfterViewInit {
 
-  displayedColumns: string[] = ['fecha', 'name', 'concepto', 'tipo', 'id'];
+  displayedColumns: string[] = ['fecha', 'monto', 'concepto', 'tipo', 'id'];
   dataSource: MatTableDataSource<UserData>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -89,11 +79,9 @@ export class ResumenTableComponent implements AfterViewInit {
 }
 
 function createNew(id: number): UserData {
-  const name =
-    USUARIOS[Math.round(Math.random() * (USUARIOS.length - 1))] +
-    ' ' +
-    USUARIOS[Math.round(Math.random() * (USUARIOS.length - 1))].charAt(0) +
-    '.';
+  const monto =
+    MONTOS[Math.round(Math.random() * (MONTOS.length - 1))] +
+    ' ';
 
     const fecha =
     FECHAS[Math.round(Math.random() * (FECHAS.length - 1))] +
@@ -109,7 +97,7 @@ function createNew(id: number): UserData {
 
   return {
     fecha:fecha,
-    name: name,
+    monto: monto,
     concepto: concepto,
     tipo: tipo,
     id: id.toString(),

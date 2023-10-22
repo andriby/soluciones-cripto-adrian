@@ -167,6 +167,15 @@ h1, h2, h3{
 
 /*Formularios*/
 
+.marco{
+    backdrop-filter: blur(4px);
+    background-color: rgba(255, 255, 255, .5);
+    padding: 1.5rem 2.5rem;
+    border-radius: 10px;
+    width: 95%;
+    text-align: center;
+}
+
 .contenedor-formulario{
     height: 94vh;
     display: flex;
@@ -210,4 +219,17 @@ h1, h2, h3{
     text-align: center;
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
+}
+
+/*Tablas*/
+table{
+    width: 100%;
+}
+
+.mat-cell{
+    text-align: left;
+}
+
+ng-container {
+    width: 25%;
 }
