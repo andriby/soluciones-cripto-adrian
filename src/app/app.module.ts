@@ -15,8 +15,7 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatStepperModule } from '@angular/material/stepper'; 
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog'; 
-import {MatTableModule} from '@angular/material/table'; 
-import { ResumenTableComponent } from './pages/panel-principal/resumen-table/resumen-table.component'; 
+import  {MatTableModule } from '@angular/material/table'; 
 import { MatSortModule } from '@angular/material/sort'; 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -33,6 +32,8 @@ import { RegisterComponent } from './pages/register/register.component';
 import { ComprarComponent } from './components/comprar/comprar.component';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { GridTableComponent } from './pages/grid/grid-table/grid-table/grid-table.component'; 
+import { StakingTableComponent } from './pages/staking/staking-table/staking-table/staking-table.component'; 
+import { ResumenTableComponent } from './pages/panel-principal/resumen-table/resumen-table.component'; 
 
 @NgModule({
   declarations: [
@@ -49,6 +50,7 @@ import { GridTableComponent } from './pages/grid/grid-table/grid-table/grid-tabl
     ComprarComponent,
     ResumenTableComponent,
     GridTableComponent,
+    StakingTableComponent,
   ],
   imports: [
     BrowserModule,
