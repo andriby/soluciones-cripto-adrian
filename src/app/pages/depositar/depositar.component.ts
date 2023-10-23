@@ -56,7 +56,7 @@ export class DepositarComponent implements OnInit {
   ];
 
   servicioFormControl = new FormControl('', [Validators.required]);
-  planFormControl = new FormControl('', [Validators.required]);
+  cuentaFormControl = new FormControl('', [Validators.required]);
   capitalFormControl = new FormControl('', [Validators.required]);
   metodoFormControl = new FormControl('', [Validators.required]);
   comprobanteFormControl = new FormControl('', [Validators.required]);

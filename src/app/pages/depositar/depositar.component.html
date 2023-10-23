@@ -15,17 +15,17 @@
                         <mat-select [formControl]="servicioFormControl">
                           <mat-option *ngFor="let servicio of servicios" [value]="servicio">{{servicio.viewValue}}</mat-option>
                         </mat-select>
-                        <mat-error *ngIf="capitalFormControl.hasError('required')">
+                        <mat-error *ngIf="servicioFormControl.hasError('required')">
                             Tipo de Servicio es <strong>necesario</strong>
                         </mat-error>
                     </mat-form-field>
 
                     <mat-form-field appearance="fill">
                         <mat-label>Cuenta</mat-label>
-                        <mat-select [formControl]="planFormControl">
+                        <mat-select [formControl]="cuentaFormControl">
                           <mat-option *ngFor="let cuenta of cuentas" [value]="cuenta">{{cuenta.viewValue}}</mat-option>
                         </mat-select>
-                        <mat-error *ngIf="capitalFormControl.hasError('required')">
+                        <mat-error *ngIf="cuentaFormControl.hasError('required')">
                            Cuenta es <strong>necesaria</strong>
                         </mat-error>
                     </mat-form-field>
