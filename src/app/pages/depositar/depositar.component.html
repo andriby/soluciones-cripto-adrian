@@ -1,0 +1,74 @@
+<div class="container-fluid">
+    <img src="../../../assets/logo-con-nombre.png" alt="Soluciones Cripto" class="img-fluid logo-con-nombre">
+    <div class="contenedor-formulario">
+
+        <div class="formulario">
+
+                <div>
+                    <h1>Depositar</h1>
+                </div>
+
+            <form (ngSubmit)="enviarFormulario()" method="post">
+                <div class="row">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Tipo de Servicio</mat-label>
+                        <mat-select [formControl]="servicioFormControl">
+                          <mat-option *ngFor="let servicio of servicios" [value]="servicio">{{servicio.viewValue}}</mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="capitalFormControl.hasError('required')">
+                            Tipo de Servicio es <strong>necesario</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Cuenta</mat-label>
+                        <mat-select [formControl]="planFormControl">
+                          <mat-option *ngFor="let cuenta of cuentas" [value]="cuenta">{{cuenta.viewValue}}</mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="capitalFormControl.hasError('required')">
+                           Cuenta es <strong>necesaria</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+                
+                <div class="row">
+                    <mat-form-field appearance="fill">
+                        <mat-label>Capital</mat-label>
+                        <input matInput type="number" min="100" max="10000" required [formControl]="capitalFormControl">
+                        <mat-error *ngIf="capitalFormControl.hasError('required')">
+                            Capital es <strong>necesaria</strong>
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field appearance="fill">
+                        <mat-label>Metodo de Pago</mat-label>
+                        <mat-select [formControl]="metodoFormControl">
+                            <mat-option *ngFor="let metodo of metodos" [value]="metodo">{{metodo.viewValue}}</mat-option>
+                        </mat-select>
+                        <mat-error *ngIf="metodoFormControl.hasError('required')">
+                            Metodo de pago es <strong>necesario</strong>
+                        </mat-error>
+                    </mat-form-field>
+                </div>
+
+                <p style="margin-bottom: 0; font-size: .7rem;">Subir comprobante de pago:</p>
+                <div class="input-group mb-3">
+                    <input type="file" class="form-control" id="comprobante" required>
+                </div>
+
+
+                <div class="row">
+                    <div class="btnGroup">
+                        <button type="button" class="btn btn-secondary" [routerLink]="['/panel']" >cancelar</button>
+                        <button type="submit" class="btn btn-primary">Comprar</button>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+            
+    </div>
+</div>
+
+<div class="bloque-ingreso"></div>

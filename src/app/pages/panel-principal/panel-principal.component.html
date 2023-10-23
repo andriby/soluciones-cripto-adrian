@@ -32,12 +32,13 @@
           <div class="row">
             <div class="col-12 col-md stakingNav botonPrincipal">
               <span>Staking</span>
-              <button class="btn btn-primary btnComprar" (click)="comprar()">Comprar</button>
+              <button class="btn btn-primary btnComprar" [routerLink]="['/comprar']">Comprar</button>
               <img src="../../../assets/staking.png" alt="">
             </div>
+            
             <div class="col-12 col-md gridNav botonPrincipal">
               <span>Grid</span>
-              <button class="btn btn-primary btnComprar" (click)="comprar()">Comprar</button>
+              <button class="btn btn-primary btnComprar" [routerLink]="['/comprar']">Comprar</button>
               <img src="../../../assets/grid.png" alt="">
             </div>
           </div>
@@ -45,12 +46,13 @@
           <div class="row">
             <div class="col-12 col-md  cripto-bolsoNav botonPrincipal">
               <span>Cripto Bolso</span>
-              <button class="btn btn-primary btnComprar" (click)="comprar()">Comprar</button>
+              <button class="btn btn-primary btnComprar" [routerLink]="['/comprar']">Comprar</button>
               <img src="../../../assets/cripto-bolso.png" alt="">
             </div>
+            
             <div class="col-12 col-md  referidosNav botonPrincipal">
               <span>Referidos</span>
-              <button class="btn btn-primary btnComprar">Referir</button>
+              <button class="btn btn-primary btnComprar" (click)="openDialog()">Referir</button>
               <img src="../../../assets/referidos.png" alt="">
             </div>
           </div>
@@ -67,18 +69,3 @@
     </div>
     
 </div>
-
-<ol>
-  <li>
-    <mat-form-field>
-      <mat-label>What's your name?</mat-label>
-      <input matInput [(ngModel)]="name">
-    </mat-form-field>
-  </li>
-  <li>
-    <button mat-raised-button (click)="openDialog()">Pick one</button>
-  </li>
-  <li *ngIf="animal">
-    You chose: <em>{{animal}}</em>
-  </li>
-</ol>

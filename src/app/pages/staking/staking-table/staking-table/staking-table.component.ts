@@ -19,8 +19,8 @@ const FECHAS: string[] = [
   '15/05/23'
 ] 
 
-const GANANCIAS: number[] = [];
-const MONTOS: number[] = [];
+const GANANCIAS: number[] = []
+const MONTOS: number[] = []
 const DIAS_RESTANTES: number[] =[]
 const RECIBOS: number[] =[]
 

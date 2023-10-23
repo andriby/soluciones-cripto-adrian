@@ -15,30 +15,39 @@ import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatStepperModule } from '@angular/material/stepper'; 
 import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule } from '@angular/material/dialog'; 
-import  {MatTableModule } from '@angular/material/table'; 
+import { MatTableModule } from '@angular/material/table'; 
 import { MatSortModule } from '@angular/material/sort'; 
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { MatPaginatorModule } from '@angular/material/paginator';
 
 import { AppRoutingModule } from './app-routing.module';
 
 import { PanelPrincipalComponent } from './pages/panel-principal/panel-principal.component';
 import { StakingComponent } from './pages/staking/staking.component';
+import { StakingTableComponent } from './pages/staking/staking-table/staking-table/staking-table.component'; 
 import { GridComponent } from './pages/grid/grid.component';
+import { GridTableComponent } from './pages/grid/grid-table/grid-table/grid-table.component';
 import { CriptoBolsoComponent } from './pages/cripto-bolso/cripto-bolso.component';
 import { BonosReferidosComponent } from './pages/bonos-referidos/bonos-referidos.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
-import { MatPaginatorModule } from '@angular/material/paginator';
-import { StakingTableComponent } from './pages/staking/staking-table/staking-table/staking-table.component'; 
-import { ResumenTableComponent } from './pages/panel-principal/resumen-table/resumen-table.component'; 
+import { ResumenTableComponent } from './pages/panel-principal/resumen-table/resumen-table.component';
+import { RetirarComponent } from './pages/retirar/retirar.component';
+import { DepositarComponent } from './pages/depositar/depositar.component';
+import { ComprarComponent } from './pages/comprar/comprar.component';
+import { CriptoBolsoTableComponent } from './pages/cripto-bolso/cripto-bolso-table/cripto-bolso-table.component'; 
 
 @NgModule({
   declarations: [
     appComponent,
     PanelPrincipalComponent,
     StakingComponent,
+    StakingTableComponent,
     GridComponent,
+    GridTableComponent,
     CriptoBolsoComponent,
     BonosReferidosComponent,
     PerfilComponent,
@@ -46,7 +55,10 @@ import { ResumenTableComponent } from './pages/panel-principal/resumen-table/res
     LoginComponent,
     RegisterComponent,
     ResumenTableComponent,
-    StakingTableComponent,
+    RetirarComponent,
+    DepositarComponent,
+    ComprarComponent,
+    CriptoBolsoTableComponent,
   ],
   imports: [
     BrowserModule,
@@ -68,7 +80,9 @@ import { ResumenTableComponent } from './pages/panel-principal/resumen-table/res
     MatDialogModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [appComponent]

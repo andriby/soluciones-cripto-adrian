@@ -1,10 +1,10 @@
-.registrarseDiv{
+.registerDiv{
     display: flex;
     margin-bottom: 2rem;
     justify-content: space-between;
 }
 
-.registrarseHeader{
+.registerHeader{
     width: 50%;
 }
 
@@ -14,7 +14,7 @@
     text-align: left;
 }
 
-.registrarseHeader mat-form-field{
+.registerHeader mat-form-field{
     width: 90%;
     display: flex;
     justify-content: end;
@@ -22,13 +22,5 @@
 
 .logo-con-nombre{
     height: 3.5rem;
-}
-
-form mat-form-field{
-    width: 100%;
-}
-
-form .row mat-form-field{
-    width: 50%;
-    margin-top: 1rem;
+    position: absolute;
 }

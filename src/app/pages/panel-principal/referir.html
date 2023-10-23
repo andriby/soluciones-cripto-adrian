@@ -1,0 +1,25 @@
+<h1 mat-dialog-title>Hola {{data.name}}</h1>
+<div mat-dialog-content>
+  <p>Referir:</p>
+  <div class="referir">
+    <button type="button" class="btn btn-primary" (click)="generarCodigo()">Generar Codigo</button>
+  </div>
+  <mat-form-field>
+    <input type="text" [ngModel]="enlace" placeholder="Referir" matInput>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button mat-dialog-close>Close</button>
+</div>
+
+<style>
+div.referir{
+    margin: 1rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+mat-form-field{
+  width: 100%;
+}
+</style>

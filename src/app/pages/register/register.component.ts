@@ -9,7 +9,7 @@ export class MyErrorStateMatcher implements ErrorStateMatcher {
   }
 }
 @Component({
-  selector: 'app-register',
+  selector: 'app-<register',
   templateUrl: './register.component.html',
   styleUrls: ['./register.component.css']
 })
@@ -35,10 +35,6 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toppings = new FormControl('');
-
-  toppingList: string[] = ['Extra cheese', 'Mushroom', 'Onion', 'Pepperoni', 'Sausage', 'Tomato'];
-
     emailFormControl = new FormControl('', [Validators.required, Validators.email]);
     passwordFormControl = new FormControl('', [Validators.required]);
     confirmPasswordFormControl = new FormControl('', [Validators.required]);
@@ -49,34 +45,5 @@ export class RegisterComponent implements OnInit {
     telefonoFormControl = new FormControl('', [Validators.required]);
     FdeNacimientoFormControl = new FormControl('', [Validators.required, this.ageValidator]);
 
-
-
     matcher = new MyErrorStateMatcher();
-
-    /*
-      passwordMatchValidator: ValidatorFn = (control: AbstractControl): null | { passwordsNotMatch: boolean } => {
-        const password = control.get('passwordFormControl')?.value;
-        const confirmPassword = control.get('confirmPasswordFormControl')?.value;
-      
-        if (password === confirmPassword) {
-          return null; 
-        } else {
-          return { passwordsNotMatch: true }; 
-        }
-      };
-    
-      this.formGroup = new FormGroup({
-        passwordFormControl: new FormControl('', [Validators.required]),
-        confirmPasswordFormControl: new FormControl('', [Validators.required]),
-      }, { validators: passwordMatchValidator });
-
-      password:any = this.passwordFormControl.value;
-      confirmPassword:any = this.confirmPasswordFormControl.value;
-      
-      sonDiferentes(): any{   
-        if (this.password !== this.confirmPassword) {
-          return false; 
-        }
-      }
-    */
 }
