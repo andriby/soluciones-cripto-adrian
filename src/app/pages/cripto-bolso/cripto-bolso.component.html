@@ -8,7 +8,10 @@
     <div class="centrar">
         <div class="marco">
             <h1>Cripto Bolso</h1>
-            <button class="btn btn-secondary depositar" [routerLink]="['/depositar']">Depositar</button>
+            <div class="btnGroup-table">
+                <button class="btn btn-secondary btnDepositar" [routerLink]="['/depositar']">Depositar</button>
+                <button class="btn btn-primary btnRetirar" [routerLink]="['/retirar']">Retirar</button>
+            </div>
             <app-cripto-bolso-table></app-cripto-bolso-table>
         </div>
     </div>

@@ -7,7 +7,10 @@
     <div class="centrar">
         <div class="marco">
             <h2>Staking</h2>
-            <button class="btn btn-secondary depositar" [routerLink]="['/depositar']">Depositar</button>
+            <div class="btnGroup-table">
+                <button class="btn btn-secondary btnDepositar" [routerLink]="['/depositar']">Depositar</button>
+                <button class="btn btn-primary btnRetirar" [routerLink]="['/retirar']">Retirar</button>
+            </div>
             <app-staking-table></app-staking-table>
         </div>
     </div>
