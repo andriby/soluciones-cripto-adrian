@@ -29,7 +29,7 @@ import { StakingTableComponent } from './pages/staking/staking-table/staking-tab
 import { GridComponent } from './pages/grid/grid.component';
 import { GridTableComponent } from './pages/grid/grid-table/grid-table/grid-table.component';
 import { CriptoBolsoComponent } from './pages/cripto-bolso/cripto-bolso.component';
-import { BonosReferidosComponent } from './pages/bonos-referidos/bonos-referidos.component';
+import { BonosComponent } from './pages/bonos/bonos.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { LoginComponent } from './pages/login/login.component';
@@ -38,7 +38,10 @@ import { ResumenTableComponent } from './pages/panel-principal/resumen-table/res
 import { RetirarComponent } from './pages/retirar/retirar.component';
 import { DepositarComponent } from './pages/depositar/depositar.component';
 import { ComprarComponent } from './pages/comprar/comprar.component';
-import { CriptoBolsoTableComponent } from './pages/cripto-bolso/cripto-bolso-table/cripto-bolso-table.component'; 
+import { CriptoBolsoTableComponent } from './pages/cripto-bolso/cripto-bolso-table/cripto-bolso-table.component';
+import { BonosTableComponent } from './pages/bonos/bonos-table/bonos-table.component';
+import { ReferidosComponent } from './pages/referidos/referidos.component';
+import { ReferidosTableComponent } from './pages/referidos/referidos-table/referidos-table.component'; 
 
 @NgModule({
   declarations: [
@@ -49,7 +52,7 @@ import { CriptoBolsoTableComponent } from './pages/cripto-bolso/cripto-bolso-tab
     GridComponent,
     GridTableComponent,
     CriptoBolsoComponent,
-    BonosReferidosComponent,
+    BonosComponent,
     PerfilComponent,
     SidebarComponent,
     LoginComponent,
@@ -59,6 +62,9 @@ import { CriptoBolsoTableComponent } from './pages/cripto-bolso/cripto-bolso-tab
     DepositarComponent,
     ComprarComponent,
     CriptoBolsoTableComponent,
+    BonosTableComponent,
+    ReferidosComponent,
+    ReferidosTableComponent,
   ],
   imports: [
     BrowserModule,

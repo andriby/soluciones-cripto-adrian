@@ -9,11 +9,12 @@ import { StakingComponent } from './pages/staking/staking.component';
 import { GridComponent } from './pages/grid/grid.component';
 import { CriptoBolsoComponent } from './pages/cripto-bolso/cripto-bolso.component';
 import { PerfilComponent } from './pages/perfil/perfil.component';
-import { BonosReferidosComponent } from './pages/bonos-referidos/bonos-referidos.component';
+import { BonosComponent } from './pages/bonos/bonos.component';
 import { DepositarComponent } from './pages/depositar/depositar.component';
 import { ComprarComponent } from './pages/comprar/comprar.component';
 import { RetirarComponent } from './pages/retirar/retirar.component';
 import { AuthGuard } from './services/auth-guard/auth-guard.service';
+import { ReferidosComponent } from './pages/referidos/referidos.component';
 
 
 const routes: Routes = [
@@ -23,7 +24,8 @@ const routes: Routes = [
   { path: 'staking', component: StakingComponent, canActivate: [AuthGuard] },
   { path: 'grid', component: GridComponent, canActivate: [AuthGuard] },
   { path: 'cripto-bolso', component: CriptoBolsoComponent, canActivate: [AuthGuard] },
-  { path: 'bonosReferidos', component: BonosReferidosComponent, canActivate: [AuthGuard] },
+  { path: 'bonos', component: BonosComponent, canActivate: [AuthGuard] },
+  { path: 'referidos', component: ReferidosComponent, canActivate: [AuthGuard] },
   { path: 'perfil', component: PerfilComponent , canActivate: [AuthGuard] },
   { path: 'depositar', component: DepositarComponent , canActivate: [AuthGuard] },
   { path: 'comprar', component: ComprarComponent , canActivate: [AuthGuard] },
